@@ -41,7 +41,7 @@ float PID;            // retorndo do calculo completo
 
 // Peso dos sensores: ((-1)+(+1))/2 = 0
 // S1:-5, S2:-3, S3:-1, S4:+1, S5:+3, S6:+5
-const int monster[8] = {A_ah, A_ho, A_pwm, B_ah, B_ho, B_pwm, A_En, B_En}
+const int monster[8] = {A_ah, A_ho, A_pwm, B_ah, B_ho, B_pwm, A_En, B_En};
 const int sensores[6] = {1, 2, 3, 4, 5, 6};
 const int peso[6] = {-5, -3, -1, 1, 3, 5};
 
