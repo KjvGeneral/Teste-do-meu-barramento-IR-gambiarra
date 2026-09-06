@@ -118,9 +118,7 @@ int erroCal(){
 // Derivada: variação = erroAtual - erroAnterior -> D = Kd * vairiação
 
 float calPID(){
-    // chamamos o calculo do erro para assim conhecermos oque estamos chamando de erro
-    
-    erro = erroCal(); // erro atual
+    // chamamos o calculo do erro para assim conhecermos oque estamos chamando de erro e corrigir
 
     float P = Kp * erro;
 
