@@ -65,7 +65,7 @@ void setup(){
 
 void loop(){
     erro = erroCal();
-    PID  = pidcal();
+    PID  = pidCal();
 
     int velEsq = BASE_VEL + PID;
     int velDir = BASE_VEL - PID;
@@ -117,7 +117,7 @@ int erroCal(){
 // Integral: somaErro = IntegralAnterior * erro -> I = Ki * somaErro
 // Derivada: variação = erroAtual - erroAnterior -> D = Kd * vairiação
 
-float pidcal(){
+float pidCal(){
     // chamamos o calculo do erro para assim conhecermos oque estamos chamando de erro e corrigir
 
     float P = Kp * erro;
