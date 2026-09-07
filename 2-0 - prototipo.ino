@@ -123,7 +123,7 @@ float pidCal(){
     float P = Kp * erro;
 
     somaErro += erro; // acumula o erro = integralAnterior
-    float I = Ki * erro;
+    float I = Ki * somaErro;
 
     float variacao = (erro - erroAnterior);
     float D = Kd * variacao;
