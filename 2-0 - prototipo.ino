@@ -67,11 +67,18 @@ void loop(){
     erro = erroCal();
     PID  = pidCal();
 
+    // aplica a correção na velocidade dos motores para corrigir a posição
     int velEsq = BASE_VEL + PID;
     int velDir = BASE_VEL - PID;
 
+    // Limita a correção de velocidade com base no maximo e minimo do pwm da shield
+    velEsq = constrain(velEsq, 0, MAXI_VEL);
+    velDir = constrain(velDir, 0, MAXI_VEL);
+
+    // função para controlar os motores de maneira facil
     Motor(HIGH, LOW, velEsq, HIGH, LOW, velDir);
 
+    // print de todas as informações necessarias para analisar se esta tudo correto.
     Serial.print("PID: ");
     Serial.print(PID);
     Serial.print(" | Motores: ");
