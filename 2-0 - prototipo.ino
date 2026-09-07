@@ -128,6 +128,9 @@ float pidCal(){
     float variacao = (erro - erroAnterior);
     float D = Kd * variacao;
 
+    // Atualizar o erro anterior
+    erroAnterior = erro;
+
     return (P + I + D);
 }
 
